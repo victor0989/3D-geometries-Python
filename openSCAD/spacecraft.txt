@@ -1,0 +1,54 @@
+import trimesh
+import numpy as np
+
+# Geometría simplificada de la nave vista en la imagen con agujero negro y enana blanca
+
+def create_blackhole_variant_ship():
+    components = []
+
+    # Fuselaje principal compacto y más corto (más frío y técnico)
+    fuselage = trimesh.creation.cylinder(radius=1.2, height=12.0)
+    fuselage.apply_translation([0, 0, 6.0])
+    fuselage.visual.vertex_colors = [80, 100, 160, 255]  # Azul metálico frío
+    components.append(fuselage)
+
+    # Escudo trasero cónico, como tobera extendida
+    cone_back = trimesh.creation.cone(radius=1.6, height=1.8)
+    cone_back.apply_translation([0, 0, -0.9])
+    cone_back.visual.vertex_colors = [60, 60, 80, 255]
+    components.append(cone_back)
+
+    # Paneles laterales fríos (radiadores o blindaje)
+    for x in [-1.8, 1.8]:
+        panel = trimesh.creation.box(extents=[0.1, 2.2, 1.2])
+        panel.apply_translation([x, 0, 6.5])
+        panel.visual.vertex_colors = [150, 180, 220, 180]  # Azul frío translúcido
+        components.append(panel)
+
+    # Toroide frontal tipo anillo de campo o sensor
+    ring = trimesh.creation.torus(radius=1.4, tube_radius=0.12)
+    ring.apply_translation([0, 0, 12.5])
+    ring.visual.vertex_colors = [200, 220, 255, 190]
+    components.append(ring)
+
+    # Esfera frontal para navegación cuántica/sensores
+    dome = trimesh.creation.icosphere(radius=0.6)
+    dome.apply_translation([0, 0, 13.2])
+    dome.visual.vertex_colors = [135, 206, 250, 230]  # Azul hielo
+    components.append(dome)
+
+    # Pequeños motores de control vectorial laterales
+    for angle in np.linspace(0, 2*np.pi, 4, endpoint=False):
+        x = np.cos(angle) * 1.6
+        y = np.sin(angle) * 1.6
+        nozzle = trimesh.creation.cone(radius=0.1, height=0.4)
+        nozzle.apply_translation([x, y, 1.5])
+        nozzle.visual.vertex_colors = [180, 180, 200, 255]
+        components.append(nozzle)
+
+    return trimesh.util.concatenate(components)
+
+# Creamos el modelo
+ship_model = create_blackhole_variant_ship()
+ship_model.export('/mnt/data/ship_blackhole_variant.stl')
+ship_model.bounds
