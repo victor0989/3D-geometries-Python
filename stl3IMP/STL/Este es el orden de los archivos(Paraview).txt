@@ -1,0 +1,104 @@
+Este es el orden de los archivos:
+builtin:diseños
+falcon_parker_star_trek_loaded_v1.stl
+falcon_parker_warp_model_1.stl
+falcon_parker_warp_model_special.stl
+star_trek_station_v2.stl
+star_treck_station_v2.stl
+star_treck_v3.stl
+falcon_parker_full_model.stl
+nave_unificada_falcon_modular.stl
+opcional->star_treck_style_station_v1.stl
+star_treck_station_v2.stl
+falcon_parker_full_model.stl
+falcon_parker_warp_model_1.stl
+falcon_parker_warp_model_special.stl
+
+
+Segundo orden:
+
+alien_style_wide_grotesque_ship.stl
+alien_style_ship.stl
+falcon_parker_star_trek_loaded_v1.stl
+falcon_parker_warp_model_1.stl
+star_trek_station_v2.stl
+falcon_parker_star_trek_loaded_v1.stl
+star_treck_v3.stl
+
+
+tercer orden:
+Falcon_Parker_Advanced_Enhanced_5.stl
+aien_style_ship.stl
+alien_style_wide_grotesque_ship.stl<-opt
+falcon_parker_star_trek_loaded_v1.stl
+star_trek_station_v2.stl
+falcon_parker_warp_model_special.stl
+star_trek_v3.stl
+star_trek_station_v2.stl
+
+#Quiero poner los nombres de los archivos
+para llamarlos en un archivo único main
+o un archivo donde cada uno de los archivos de Python sean modulos de una nave mas grande, que sean llamados por main y que se junten todos los modulos o archivos .py en uno solo para exportar una super nave con cada parte:
+
+partes o archivos para ser llamados:
+
+Pannels_antennaSolarParker_renderSpace.py
+StarTreck_station_antenna_SolarParker.py
+Pannels_antennaSolarParker_render.py
+Integration_Parts_space.py
+AlienSpaceCraft.py
+Estacion.py
+AienShipStalattorPropulsionHypersonic.py
+Enterprise_2.py
+Rocket_StarShipReactor.py
+SpaceCraft2DComponents_fusion.py
+
+Puedes guardado como mlp de mesh
+Ve a Filters > Mesh Layer > Flatten Visible Layers
+
+source venv/bin/activate
+
+Orden4 mesh
+Anillo_estructural_Archivo
+alien_style_wide_grotesque_s
+falcon_parker_star_trek_loaded
+large_space_station
+falcon_caza_styled
+
+orden5 Paraview
+ArchivoPrueva_2.stl
+Anillo_estructural_Archivo.stl
+falcon_parker_star_trek_loadled_v1.stl
+falcon_caza_styld.stl
+
+imp2
+IMP3
+IMPAnillo
+importanteUnion
+SpaceCraftMaterial
+alien_style_ship
+Falcon_parker_unificado
+falcon_parker_warp_model_special
+star_treck_style_station_v1
+star_trek_station_v2
+falcon_caza_styledIMPAnilloIM.stl
+
+
+orden mesh:
+train
+star_trek_style_station_v1
+falcon_caza_styledIMPAn
+falcon_reducido
+imp2
+
+
+mesh
+falcon_caza_importante_git
+falcon_parker_unificado
+falcon_parker_warp_model_1
+falcon_parker_star_trek_loaded
+
+
+---
+star_trek_style_station_v1
+falcon_parker_star_trek_loaded
