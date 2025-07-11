@@ -1,0 +1,154 @@
+#hammond.py
+#lowpoly spacecraft with python
+#https://polyscope.run/py/ traducir motores MERLIN,RAPTOR, Tkamav integrado mini a Polyscope para visualización, muy importante, traduce
+#tu trabajo a polyscope, a un resultado concreto-imagen PNG o jpeg captura del modelo 3D y el código.
+#Simulacion de nave PNG low poly, varias naves
+#Simulacion de motores de cohetes con hidrazina o solar Parker con estructuras predefinidas-pasar de OpenSCAD a simulación que genere estructura
+del motor en archivo PNG para pycharm
+#partes de la nave
+#lowpoly y GPT modelos de naves
+#Live Python coding! Low poly spacecraft #design. Glowing drive details
+#Podria intentar generar una imagen en PNG de las diferentes partes de la nave
+#Podria tratar de que fuera una imagen PNG con Polyscope o Low poly pero para simulación de naves
+#Podria simplemente intentar simular las partes de la nave en Python y Quedarme con una imagen PNG que se guardaría
+#quiero que me crees modelos, o diseños d naves en base a partes de naves que te voy a pasar.
+# Una sección es un generador procedural denaves 1) aquí te paso las medidas con mesh y los procedimientos
+#Otra sección se fundamenta en un live Python conding 3D mesh processing Making a space fighter or spacecraft con blender
+#Aqui hay varios archivos y scripts con explicaciones,
+#Donde entras tu? tu tienes que generar Scripts organizados para utilizar en blender o con mesh openSCAD principalmente en blender para cada parte de la #nave y unir todos los scripts o parte de la nave que te pase en un diseño entero unificado para poder visualizarlo en blender. Lleva tiempo que lo hagamos, #lo podemos hacer asi:
+#Te paso un script con todas las partes, las vas pensando y uniendo coherentemente para diseñar la nave o cohete, podemos incluso sacar un satélite, pro por #ahora solo quiero que diseñemos un diseño de una nave grande no pequeña.
+#others improving code
+#designing spacecraft parts structural
+#procedural
+
+#Necesito combinar stable difusión también o tecnología que me genere naves? opcional, curiosidad
+#fighter.py
+#other parts for chatGPT
+#quiero que me crees modelos, o diseños d naves en base a partes de naves que te voy a pasar.
+# Una sección es un generador procedural denaves 1) aquí te paso las medidas con mesh y los procedimientos
+#Otra sección se fundamenta en un live Python conding 3D mesh processing Making a space fighter or spacecraft con blender
+#Aqui hay varios archivos y scripts con explicaciones,
+#Donde entras tu? tu tienes que generar Scripts organizados para utilizar en blender o con mesh openSCAD principalmente en blender para cada parte de la #nave y unir todos los scripts o parte de la nave que te pase en un diseño entero unificado para poder visualizarlo en blender. Lleva tiempo que lo hagamos, #lo podemos hacer asi:
+#Te paso un script con todas las partes, las vas pensando y uniendo coherentemente para diseñar la nave o cohete, podemos incluso sacar un satélite, pro por #ahora solo quiero que diseñemos un diseño de una nave grande no pequeña.
+#others improving code
+#designing spacecraft parts structural
+#procedural
+#traducir a polyscope y trimesh-generar una imagen 3D que se vea bien desde Pycharm ejecutando el archivo-aclara esto a chatGPT
+
+#Puedes diseñar naves en base imágenes promtps y simulaciones de GPT, motores MERLIN osimilares y openSCAD o mesh.
+
+use_shapely=False
+)
+fus_rear_a = mu.rotate_mesh(fus_rear_a,mu.ROTATION_Z_90)
+fus_rear_a = mu.translate_mesh(fus_rear_a, mu.vy(-fu_rear_extra / 2))
+
+rib_rear_b = p2d.rect_2d(*REAR_B_DIM_XZ)
+rib_rear_b = mu.bevel_polygon_chord(rib_rear_b. REAR_B_BEV)
+
+fus_rear_b = mu.translate_mesh(
+    fus_rear_a, mu.vy(FUS_REAR_LEN_B * FUS_REAR_LEN_A /2))
+fus_rear_b = mu.translate_mesh(
+    fus_rear_b, mu.vy(FUS_REAR_LEN_B /2))
+fus_center = mu.translate_mesh(
+    fus_center, mu.vy(FUS_REAR_LEN_B + FUS_REAR_LEN_A + FUS_CENTER_LEN / 2))
+fus_nose = mu.translate_mesh(FUS_REAR_LEN_B + FUS_REAR_LEN_A + FUS_CENTER_LEN / 2))
+
+power = p3d.cylinder(
+      length=FUS_REAR_LEN_A + FUS_CENTER_LEN + 2,
+      radius=1.5,
+      subdivision=12
+)
+power_pos = vec3(
+     CENTER_DIM_XZ[0] / 2,
+     FUS_REAR_LEN_B + FUS_REAR_LEN_A + FUS_CENTER_LEN / 2 + FUS_Y_MIN,
+     z=0
+)
+#16:40
+support = kex.solid_from_rib_chamfer_slope(
+   rib_rx=ps2.rect
+   height=SUPPORT_
+   height_extra=1,
+   inset=SUPPORT_
+   camfer=None
+)
+support = mu.rotate
+
+drive_suppoers = ps
+     model=support,
+     parent='support',
+     prefix='support',
+     count=2,
+     axis_func=mu.rotation_y,
+     offset_angle=0.0,
+     offset=mu.vx(SUPPORT_X_DFF)
+)
+drive_supports = dict(
+     support=ps.Part(parent='fuselage', transf=ps.translation(mu.vy(DRIVES_Y_OFF))),
+     **drive_supports
+)
+
+powers = {}
+for idx in range(2):
+    pos = power_pos
+    if idx == 0:
+        pos = pos * vec3(-1, y:1, z:1)
+    powers[f'power {idx}'] = ps.Part{}
+
+for idx, (rot, pos) in enumerate(transfs)
+}
+
+parts = dict(
+    root=ps.Part(),
+    fuselage=ps.Part(parent='root', model=fus, props=dict(auto_smooth_angle=40.0)
+)
+
+shields = _shields(parts, lod)
+thrusters = _thrusters(parts, lod)
+windows = _Windows(parts, lod)
+sensors = _sensors(parts, lod)
+coms = _com_array(parts, lod)
+other = _other(parts, lod)
+
+parts = dict(
+     **parts,
+     **hardpoints,
+     **reactors,
+     **drives,
+     **drive_supports,
+     **Powers,
+     **rads,
+     **rads_low,
+     **shields,
+     **thrusters,
+     **windows,
+     **sensors,
+     **coms,
+     **other
+)
+
+#Que se pueda visualizar la nave con polyscope y trimesh desde pycharm y sacarle captura a tu creacion-chatGPT
+
+#otras partes de ejemplo
+DOCKING_RING_POS = vec3(
+   x:0
+   FUS_Y_MAX - 7,
+   -NOSE_DIM_XZ[1] / 2
+)
+
+def hammond(lod: int) -> Tuple[ps.PartsDict, Dict[str, Any]]:
+  """low poly hammond"""
+
+drive_subs = 12
+
+# Order goes nose, center, rear a, rear b
+
+rib_nose = p2d.rect_2d(NOSE_DIM_XZ[0] / 2, NOSE_DIM_XZ[1])
+rib_nose = mu.bevel_polygon_chord(rib_nose, NOSE_BEV_XZ)
+rib_nose = rib_nose * vec2(x: 2, y:1)
+
+rib_center = p2d.rect_2d(CENTER_DIM_XZ[0] / 2, CENTER_DIM_XZ[1])
+rib_center = mu.bevel_polygon_chord(rib_center, CENTER_BEV_XZ)
+rib_center = rib_center * vec2(x:2, y:1)
+
+#original simple nose
+# fus_nose = mu.solid_from_rib_chamfer_triangulate()
