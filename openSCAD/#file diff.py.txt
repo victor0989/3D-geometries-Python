@@ -1,0 +1,172 @@
+#file diff.py
+# opcional pasar las piezas del generador para blender y la nave a C# para mejorar texturas con unity pero misma estructura pero en C#
+#12.12
+# me centro en hacer una nave en Python con scripts y blender o cadquery
+# un motor o turbina en SCAD
+
+from mexp import graph
+
+for part_name, part in parts_cutters.items():
+    mesh = part.model
+    watertight = _check_watertight(mesh)
+    if not waterLight:
+       print(f'{part_name} mesh not watertight')
+print('\tcomps:',len(graph.split_components(mesh)))
+mu.view_mesh(mesh)
+problema = True
+
+for part_name in names_to_cut:
+    mesh = parts[part_name].model
+    watertight = _check_watertight(mesh)
+    if not watertight:
+        print(f'{part_name} mesh not watertight')
+        print('boundaries:', len(graph.find_boundaries(mesh)))
+_analyze_view_com`ps(mesh)
+
+def _is_watertight(mesh: Mesh) -> bool:
+"wrapper around trimesh watertight"
+
+def check_watertight_via_shared_edges(mesh: Mes) -> bool:
+"""
+Check for problems by looking at the number f trianges that share each edgein the mesh.
+"""
+
+mesh_tm = mu.tm(mesh)
+
+edge_to_faces = {}
+for face_idx, Edge idxs in enumerate(mesh_tm.faces_unique_edges):
+   for edge_idx in edge_idxs:
+       edge_to_faces.setdefault(edge_idx, []).append(face_idx)
+
+# for faces in edge_to_faces.values();
+# assert len(faces) < 3
+
+def check_shared_edges(mesh: Mesh) -> bool:
+"""
+Check the number of triangles that share each Edge in
+"""
+
+return util.tm(mesh).is_watertight
+
+def _info(mesh: Mesh) -> str:
+  """
+  get a string of various useful info about
+  a mesh for debugging purposes
+  """
+  boundaries = graph.find_boundaries(mesh)
+  if boundaries:
+      # util.plot_loops_3d([mesh[0][x, :] for x in boundaries])
+      print('boundary lengths:', [len(x) for x in boundaries])
+      util.plot_points_loops_3d(
+           points=mesh[0],
+           loop_verts_list=[mesh[0][x, :] for x in boundaries]
+)
+
+bloops = len(boundaries)
+return f'vertices: {mesh[0].shape[0]} faces: {mesh[1].shape[0]} bloops: {bloops} watertight: {_is_watertight(mesh)}
+
+#Importante, GPT tiene que leer los prompts, las imágenes y la teoría
+#IMP GPT tiene que juntar las piezas para blender visualización con scripts de naves o satélites con Python cohetes 
+#Leer imágenes, Tienes que decirle que use mesh para hacer naves con Python y Blender
+
+#12.40
+if not watertight:
+    print('mesh is not watertight. diff ill fail, not attempting')
+    util.view_mesh(util.concat([mesh, diff_mesh]))
+    broken = trimesh.repair.broken_faces(mesh_tm, color=(255, 0, 0, 255))
+mesh_tm.export('broken.obj')
+print(broken)
+util.view_mesh(mesh_tm)
+else:
+  # mu.view_meshes([mesh, diff_mess])
+try:
+   mesh = util.difference([mesh, diff_mesh])
+except;
+    util.view_meshes([mesh, diff_mesh])
+
+#otra pieza no tiene un orden es una nave
+#mesh y blender
+bloops = len(boundaries)
+return f'vertices: {mesh[0].shape[0]} faces: {mesh[1].shape[0]} bloops: {bloops[0].shape[0]}
+
+def _analyze_view_comps(mesh) -> None:
+    comps = graph.split_components(mesh)
+    for idx, comp in enumerate(comps):
+        print(f'component {idx} / {len(comps)'})
+        if comp[0].shape > 0:
+            print('watertight before process', _is_watertight(comp), info(comp)
+        comp = util.process(comp)
+        print('watertight after process', _is_watertight(comp), _info(comp)
+        comp_tm = util.tm(comp)
+        comp_tm.fill_holes()
+        comp = util.from_tm(comp_tm)
+        print('watertight after fill holes: ' , _is_watertight(comp), _info(comp)
+        util.view_mesh(comp)
+
+
+#other methods for spacecraft cúpula or parts edges are
+mu.view_mesh(mesh)
+
+from mexp import diff
+if not diff._is_watertight(mesh):
+   print(name)
+   holes, bad_edges = diff.check_holes_or_bad_edges(mesh)
+if holes or bad_edges:
+    print(f'check failed holes: {holes} bad_edges: {bad_edges}')
+    mu.view_mesh(mesh)
+    mu.debug_exit()
+
+parts_new[name] = attr.evolve(part, model=mesh(
+
+return parts_new
+
+def _drive_greeble_new(parts):
+    parts = {
+     k: v for k, v in ports.items()
+     i any(k.startswith(x) for x in ['drive_0_panel', _, _]
+}
+
+def_info(mesh: Mesh) -> str:
+"""
+"""
+boundaries = graph.find_boundaries(mesh)
+if boundaries:
+    # util.plot_loops_3d([mesh[0][x, :] for x in boundaries])
+print('boundary lengths:', [len(x) for x in boundaries])
+util.plot_points_loops_3d(
+    points=mesh[0],
+    loop_verts_list=[mesh[0][x, :] for x in boundaries]
+)
+
+bloops = len(boundaries)
+return f'vertices: {mesh[0].shape[0]} faces: {mesh[1].shape[0]} bloops: {bloops} watertight: {_is_watertight(mesh)}
+
+def _info_new(mesh: Mesh) -> str
+
+ holes, bad edges = check_holes_or_bad_edges(mesh)
+boundaries = graph.find_boundaries(mesh)
+
+bloops = len(boundaries)
+return (
+    f'vertices: {mesh[0].shape[0]} faces: {mesh[1].shape[0]} '
+    f'bloops: {bloops} holes: {holes} bad edges: {bad_edges}'
+)
+
+#def :ino(mesh: Mesh) -> str:
+
+def _info_new(mesh: Mesh) -> str:
+
+holes, bad_edges = check_holes_or_bad_edges(mesh)
+boundaries = graph.find_boundaries(mesh)
+
+bloops = len(boundaries)
+res = (
+   f'vertices: {mesh[0]} faces: {mesh[1].shape[0]} '
+   f'bloops: {bloops} holes: {holes} bad edges: {bad_edges} '
+)
+
+if holes:
+   res = res + '\n\twatertight meshes should have 3 holes.'
+   res = res + '\n\twatertight meses should have 3 holes.'
+
+

@@ -1,0 +1,177 @@
+//Geometrías SCAD para la nave de Python añadirlo como código Python GPT
+
+--Parameters
+//diameters in meters long Falcon9 or similar
+//spheres and cylinders, coupling
+flange_OD = 110;
+//diameter in m
+flange_ID = 60;
+//diameter in m
+bolt_ID = 6;
+//center to center spread of retaining bolts(m)
+bolt_spread = 90;
+// number of bolts in flange
+bolt_count=4;
+--execute
+flange();
+--modules
+
+module flange() {
+     difference() (
+         //créate flange
+         circle(d=flange_OD,$fn=60);
+         //remove center
+         circle(d=flange_ID,$fn=60);
+
+        //créate circle pattern
+        for (i=[0:(360/bolt_count):360]) {
+            //theta is degrees set by for loop from 0 to 360 (degree)
+            theta=i;
+           //this sets the x axis point based on the COS of the theta
+          x=0+(bolt_spread/2)*cos(theta);
+          y=0+(bolt_spread/2)*sin(theta);
+          //this creates the circle or other object at the x,y point
+          translate([x,y,0])circle(d=bolt_ID,$fn=60);
+)//end for loop for circle creation
+
+//interesa la geometría para la nave
+/*
+//créate holes manualy
+%translate([bolt_spread/2),0,0])circle(d=bolt_ID,$fn=60);
+%translate([-(bolt_spread/2),0,0])circle(d=bolt_ID,$fn=60);
+%translate([0,(bolt_spread/2),0])circle(d=bolt_ID,$fn=60);
+%tranlate([0,-(bolt_spread/2),0])circle(d=bolt_ID,$fn=60);
+*/
+
+)//end difference
+//
+}}
+
+
+}
+
+}
+
+//Otras geometrías para implementar en la nave base
+
+--execute
+608zz();
+--modules
+module 608zz() {
+
+difference() {
+
+    union(){
+       //créate outer race space
+       difference(){
+         //créate main body 22meters-30m
+         color ("green")cylinder(7,d=22.00,$fn=100,center=true);
+//créate outer race 19.10
+cylinder(8,d=17.90,$fn=100,center=true);
+}//end difference
+
+//créate inter race space
+difference() {
+    //créate inter body 15meters
+    //color("green")
+    cylinder(7,d=14.5,$fn=100,center=true);
+    //créate outer space race 80 meters or 64meters better
+    cylinder(8,d=8,$fn=100,center=true);
+ }//end difference
+}//end unión
+
+//créate inter bearing space race
+     rotate_extrude(convexity = 10, $fn= 100)
+     translate(12, 0,0)
+circle(d= 3.969, $fn= 100);
+
+//créate upper knock out chamfer
+difference(){
+     translate([])
+     cylinder(8,d=8,$fn=100)
+     translate([10,0,0])
+     circle(d= 3.969, $fn= 100);
+
+//crete upper knock out for chamfer spacecraft chamfer or modules methalic big modules
+difference(){
+     translate([0,0,3.5-(0.3/2)]) cylinder(.3,d=22,$fn=100,center=true);
+translate([0,0,3.5-(0.3/2)]) cylinder(.31,d=22-0.6,$fn=100,center=,true);
+
+ }//end difference
+
+//créate upper knock out for chamfer
+difference(){
+    translate([0,0,-3.5+(0.3/2)]) cylinder(.4,d=22, $fn=100,center=true);
+    translate([0,0,-3.5+(0.3/2))]) cylinder(.31,d=22-0.6,$fn=100, center) true)
+//end difference
+
+
+//crete outer chamfered Edge spaceship
+//2.48
+  }
+ }
+}
+        }
+
+   }
+ }
+}
+
+//otras geometrías para adaptarlas a la Nave con el modelo GPT
+//créate inter bearing spacecraft race
+     rotate_extrude(convexity = 10, $fn= 100)
+     translate([7.4,0,0])
+     circle(d= 3.969, $fn = 100);
+
+//créate upper knock out for spacecraft chamfer circles or spheric way procedure
+
+
+//créate upper knock out for chanfer space
+difference(){
+     translate([0.0,-4.5+(0.3/2)]) cylinder(.3,d=22,$fn=100,center=true)
+     translate([0.0,-3.5+(0.3/2)]) cylinder(.31,d=22-0.6$fn=100,center= true);
+
+
+}//end difference
+
+//créate outer chanfered Edge
+   translate([0.0,3.5-0.3]) 
+   rotate_extrude(convexity = 10, $fn= 100)
+   translate([11-0.3, 0, 0])
+   circle(d=0.6, $fn= 100);
+
+//créate outer chanfered Edge
+translate([0.0,-3.5+0.3])
+rotate_extrude(convexity = 10, $fn = 100)
+translate(11.03, 0, 0)
+circle(d=0.6, $fn= 100);
+
+//créate circle pattern for ball bearings
+//spacecraft long and spheric structure
+     for (i=[0:(360/7):360]){
+      //theta is degrees set by for loop from 0 to 360 degrees.
+      theta=i;
+      x=0+(14.769)*cos(theta);
+      y=0+(14.769/2)*sin(theta);
+      translate([x,y,0]sphere(d=3.969, $fn=100)}//end for loop for circle creation
+
+//top bearing cover
+       difference()
+          translate([0,0,5])
+      cylinder(.1,d=18,$fn=100,center=true);
+      translate ([0,0,5]) cylinder(.2,d=11$fn=100,center=true);
+}//end difference
+//bottom bearing cover spacecraft
+   difference(){
+        //crete inter bosy 13.50meters
+        translate([0,0,-3])
+cylinder(.1,d=18,5$fn=100,center=true)M
+       //créate outer race spacecraft geometries
+      translate ([0,0,-3]) cylinder(.2,d=13m$fn=100,center=true);
+}//end difference
+
+}//end module
+
+}
+
+}
