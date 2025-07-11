@@ -1,0 +1,194 @@
+Las variables
+𝑟
+r y
+𝑡
+t se acomodan, y de forma similar, si los espaciotiempos son distintos, deben divergir. Observamos que el tiempo propio y los radios exteriores convergen, como se esperaría en un espaciotiempo convergente. También es claro que la línea
+𝑟
+=
+0
+r=0 no es convergente, y el espaciotiempo límite presenta una curvatura infinita en ese punto.
+
+Para analizar el futuro de este evento singular, consideramos el espaciotiempo de la secuencia límite de colapsos supercríticos y subcríticos.
+
+Ahora discutimos la estructura global del espaciotiempo crítico. Nuestra primera pregunta es sobre la naturaleza de la línea
+𝑟
+=
+0
+r=0 durante el colapso singular. Un observador situado en un radio finito
+𝑟
+r ve el colapso de un campo escalar hasta un punto, seguido de un rebote. Esto ocurre tanto para colapsos supercríticos como subcríticos, ya que incluso cuando se forma un agujero negro, la mayoría de la energía inicial del campo escalar escapa, y el agujero negro contiene solo una fracción decreciente de la masa inicial al ajustar el parámetro hacia la criticidad. Mucho tiempo después del rebote, el observador puede medir el corrimiento al rojo gravitacional hacia radios interiores adyacentes y concluye que no hay corrimiento al rojo significativo para la mayoría de radios.
+
+En el escenario supercrítico, existen corrimientos al rojo significativos a escalas
+𝑟
+∼
+𝑀
+BH
+r∼M
+BH
+​
+ . Sin embargo, para cualquier observador en un radio fijo, al tomar el límite
+𝑝
+→
+𝑝
+∗
+p→p
+∗
+ , la esfera de influencia de la masa del agujero negro decreciente se reduce a cero y el espaciotiempo converge punto a punto al espacio de Minkowski para
+𝑟
+>
+0
+r>0. La convergencia no es uniforme, ya que para una diferencia arbitraria
+𝜖
+ϵ en corrimiento al rojo entre el observador y un radio interior fiduciario, se puede construir un radio
+𝑟
+<
+𝑀
+/
+𝜖
+r<M/ϵ dentro del cual el corrimiento al rojo es mayor que
+𝜖
+ϵ. En los dos límites
+𝑝
+→
+𝑝
+1
+∗
+p→p
+1
+∗
+​
+  y
+𝑝
+→
+𝑝
+2
+∗
+p→p
+2
+∗
+​
+ , los espaciotiempos convergen punto a punto en todos los puntos excepto en la línea
+𝑟
+=
+0
+r=0.
+
+Una analogía simple es la de una estrella de campo débil singular. Consideremos una secuencia de espaciotiempos con una única estrella de masa
+𝑀
+∗
+M
+∗
+  y radio
+𝑟
+∗
+=
+𝑀
+∗
+/
+𝜖
+r
+∗
+ =M
+∗
+ /ϵ. El potencial newtoniano fuera de la estrella es
+𝑉
+(
+𝑟
+)
+=
+−
+2
+𝑀
+∗
+/
+𝑟
+V(r)=−2M
+∗
+ /r para
+𝑟
+>
+𝑀
+∗
+/
+𝜖
+r>M
+∗
+ /ϵ. Para simplificar, hacemos que el potencial sea continuo y constante dentro del radio,
+𝑉
+(
+𝑟
+)
+=
+𝜖
+V(r)=ϵ. Para valores pequeños de
+𝜖
+ϵ, el espaciotiempo está en el régimen de campo débil en orden
+𝜖
+ϵ. Si tomamos una secuencia de estos espaciotiempos con
+𝜖
+ϵ fijo y masa
+𝑀
+∗
+M
+∗
+  decreciente, la curvatura máxima
+𝑅
+∼
+𝜖
+3
+/
+𝑀
+∗
+2
+R∼ϵ
+3
+ /M
+∗2
+  aumenta sin límite. Aparece una singularidad desnuda ilusoria en ese límite.
+
+Podemos preguntarnos cómo es el espaciotiempo límite cuando
+𝑀
+∗
+→
+0
+M
+∗
+ →0. La respuesta obvia sería el espacio vacío de Minkowski. La convergencia hacia este espacio es punto a punto, pero no uniforme. En el límite,
+𝑉
+0
+(
+𝑟
+)
+=
+lim
+⁡
+𝑀
+∗
+→
+0
+𝑀
+∗
+/
+𝑟
+V
+0
+​
+ (r)=lim
+M
+∗
+ →0
+​
+ M
+∗
+ /r converge a 0 punto a punto, pero no uniformemente, por lo que
+𝑉
+0
+(
+𝑟
+)
+=
+0
+V
+0
+​
+ (r)=0 en todas partes excepto en (r=0

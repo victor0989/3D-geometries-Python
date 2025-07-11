@@ -1,0 +1,11 @@
+| Sistema                        | Función                                                           |
+| ------------------------------ | ----------------------------------------------------------------- |
+| 🛰 **Estructura ligera**      | Cubierta y bastidor (aluminio, CFRP, etc.)                        |
+| ⚙ **Sistema de acoplamiento** | Encaje con la segunda etapa o dispensador (como un ESPA ring)     |
+|  **Power System**            | Baterías + paneles solares desplegables                           |
+|  **Propulsor de plasma**     | Motor de iones o Hall effect thruster (Xe, Kr, Argón, etc.)       |
+|  **Sistema híbrido**         | Posible booster químico pequeño para cambios rápidos              |
+| 🌡 **Thermal control**        | Radiadores, heat pipes o refrigeración líquida para disipar calor |
+|  **Onboard Computer**        | Computadora de vuelo con RTOS (como FreeRTOS o VxWorks)           |
+|  **Sistema de comunicación** | Banda X, S o UHF/VHF, antenas orientables                         |
+|  **Payload / instrumentos**  | Lo que tú diseñes (sensores, cámaras, LIDAR, etc.)                |
